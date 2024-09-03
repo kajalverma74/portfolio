@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #007bff;
+    --text-light: #6c757d;
+    --text-dark: #343a40;
+    --extra-light: #f8f9fa;
+    --max-width: 1200px;
+
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background: #f8f8f8;
+}
+
+header {
+    height: 70px;
+    width: 100%;
+    background: #848181;
+    display: flex;
+    align-items: center;
+    padding-left: 12px;
+    color: #ffffff;
+    position: sticky;
+    top: 0;
+
+}
+
+
+.logo a {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    color: black;
+    letter-spacing: 3px;
+
+}
+
+.logo span {
+    color: #f69e33;
+    cursor: none;
+}
+
+.logo span:hover {
+    color: #dd7d08;
+    transition: 1s;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 50px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+nav ul li a:hover {
+    color: rgb(28, 28, 27);
+    cursor: pointer;
+}
+
+section {
+    background-color: var(--extra-light);
+}
+
+.section_container {
+    min-height: 100vh;
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.subtitle {
+    letter-spacing: 2px;
+    color: var(--text-light);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 3rem;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+.description {
+    line-height: 1.5rem;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+}
+
+.action_btns {
+    display: flex;
+    gap: 1rem;
+}
+
+.action_btns button {
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 1rem 2rem;
+    outline: none;
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+
+}
+
+.hire_me {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.hire_me:hover {
+    background-color: lightcyan;
+    color: var(--primary-color);
+}
+
+.portfolio {
+    color: var(--primary-color);
+    background: none;
+
+}
+
+.portfolio:hover {
+    background-color: lightcyan;
+    color: var(--primary-color);
+}
+
+.image img {
+    width: 65%;
+    border-radius: 50%;
+    margin-top: 80px;
+}
+
+@media (max-width: 750px) {
+    .section_container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .image img {
+        width: 70%;
+        margin: auto;
+    }
+
+    .content {
+        padding: 2rem;
+    }
+}

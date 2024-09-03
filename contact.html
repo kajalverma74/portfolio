@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contact.css">
+    <title>Document</title>
+</head>
+<style>
+    .contact-section {
+    background-color: var(--extra-light);
+    padding: 2rem 0;
+}
+
+.contact-content {
+    max-width: var(--max-width);
+    margin: auto;
+    text-align: center;
+}
+
+.contact-title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+.contact-description {
+    color: var(--text-light);
+    margin-bottom: 2rem;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.form-group label {
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+.form-group textarea {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: var(--button-border-radius);
+    font-size: 1rem;
+    font-family: inherit;
+    color: var(--text-dark);
+}
+
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.submit-btn {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: var(--button-border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: var(--button-hover-bg);
+    color: var(--primary-color);
+}
+
+@media (max-width: 750px) {
+    .contact-content {
+        padding: 0 1rem;
+    }
+
+    .contact-form {
+        padding: 0 1rem;
+    }
+}
+
+</style>
+<body>
+    <section class="contact-section" id="contact">
+        <div class="section_container">
+            <div class="contact-content">
+                <h2 class="contact-title">Contact Me</h2>
+                <p class="contact-description">
+                    If you have any questions or would like to discuss a project, feel free to contact me!
+                </p>
+                <form action="#" method="POST" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>
